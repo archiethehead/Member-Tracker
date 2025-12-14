@@ -10,6 +10,13 @@ The bot itself can be invited to servers with the following link:
 
 > https://discord.com/oauth2/authorize?client_id=1449210899964366960&permissions=67584&integration_type=0&scope=bot
 
+For development, the Discord API needs to be installed. If this is not the case, the command below will rectify that:
+
+> python -m pip install Discord
+
+(Note, 'python' can be replaced with whatever your system path refers to Python as, such as py, or python3).
+
+
 # Quick Start
 Launching main.py creates a server connection, which runs an instance of the bot for every server it is in. The release build will handle this with Microsoft Azure, eliminating the need for local hosting.
 
