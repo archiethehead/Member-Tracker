@@ -1,6 +1,7 @@
 import discord
 from os import getenv
 from os import remove
+from os import _exit
 
 def write_to_client_list(new_client):
     client_file = open("client_file.txt", "a")
@@ -103,5 +104,7 @@ async def on_ready():
         remove_client()
         create_client_list(discord_client_list)
         client_list = get_client_list()
+    _exit(1)
+
 
 client.run(getenv("DISCORD_TOKEN"))

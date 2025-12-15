@@ -1,5 +1,5 @@
 # Member-Tracker
-A Discord bot for a client that needs to be alerted when a member of their server leaves. It accomplishes this by checking every members name against an initialized file with the server members (adding new members), and seeing if any are missing. A part of the mandate was to make it cost effective, so this is all handled in on_ready(), and ran once every 24 hours in an Azure Virtual Machine.
+A Discord bot for a client that needs to be alerted when a member of their server leaves. It accomplishes this by checking every members name against an initialized file with the server members (adding new members), and seeing if any are missing. A part of the mandate was to make it cost effective, so this is all handled in on_ready(), and ran once every 24 hours. This can be done with an Azure virtual machine, or can be ran locally.
 
 # Installation
 The repository (inlcuding the source and documentation) can be cloned with the folowing command:
@@ -18,7 +18,7 @@ For development, the Discord API needs to be installed. If this is not the case,
 
 
 # Quick Start
-Launching main.py creates a server connection, which runs an instance of the bot for every server it is in. The release build will handle this with Microsoft Azure, eliminating the need for local hosting.
+Launching main.py creates a server connection, which runs an instance of the bot for every server it is in. This can be done locally or with an Azure VM.
 
 # Contributors
 Mr. Archie T. Healy - archiehealy06@gmail.com
