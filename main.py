@@ -33,9 +33,9 @@ class member_tracker():
         except FileNotFoundError:
             return []
     
-    def create_client_list(self, client_list):
+    def create_client_list(self):
         new_client_file = open("client_file.txt", "a")
-        for client in client_list:
+        for client in self.discord_client_list:
             print(client, file = new_client_file)
     
     
@@ -96,7 +96,7 @@ async def on_ready():
             await channel.send(f"{username} has left the server!")
 
         member_tracker_bot.delete_client_list()
-        member_tracker_bot.create_client_list(member_tracker_bot.discord_client_list)
+        member_tracker_bot.create_client_list()
         member_tracker_bot.client_list = member_tracker_bot.get_client_list()
 
     _exit(1)
